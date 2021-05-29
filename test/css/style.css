@@ -1,0 +1,391 @@
+@font-face {
+    font-family: 'Montserrat';
+    src:
+        url("../fonts/Montserrat-SemiBold.woff") format("woff"),
+        url("../fonts/Montserrat-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src:
+        url("../fonts/Montserrat-Bold.woff") format("woff"),
+        url("../fonts/Montserrat-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src:
+        url("../fonts/Montserrat-ExtraBold.woff") format("woff"),
+        url("../fonts/Montserrat-ExtraBold.ttf") format("truetype");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #E5E5E5;
+    font-family: Montserrat;
+}
+
+.container {
+    max-width: 1280px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.card {
+    margin-top: 100px;
+}
+
+.card__inner {
+    display: flex;
+    background-color: #ffffff;
+    max-width: 1120px;
+}
+
+.card__image {
+    max-width: 560px;
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(180deg, #428A60 0%, #35734F 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.card__image::after,
+.card__image::before {
+    position: absolute;
+    content: '';
+    top: 71px;
+    left: 20px;
+    max-width: 398px;
+    width: 100%;
+    height: 398px;
+    border-radius: 50%;
+    background-color: #428A60;
+    z-index: 1;
+}
+
+.card__image::before {
+    top: -120px;
+    left: 202px;
+    width: 688px;
+    height: 688px;
+    opacity: 0.03;
+    border: 20px solid #ffffff;
+    border-radius: 50%;
+    background-color: #428A60;
+    z-index: 1;
+}
+
+.card__image-name,
+.card__image-text {
+    display: block;
+    position: absolute;
+    padding-left: 40px;
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.card__image-name {
+    padding-top: 40px;
+    z-index: 100;
+}
+
+.card__image-text {
+    bottom: 35px;
+    text-transform: uppercase;
+}
+
+.card__image-prod {
+    display: block;
+    position: absolute;
+    top: 212px;
+    left: 57px;
+    max-width: 465px;
+    width: 100%;
+    height: 255px;
+    z-index: 100;
+}
+
+.form {
+    width: 100%;
+    height: 500px;
+}
+
+.form__inner {
+    max-width: 340px;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 52px;
+}
+
+.form__title {
+    padding: 29px 0;
+    text-align: center;
+    background-color: #f8f8f8;
+    font-family: Montserrat;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 130%;
+    color: #212121;
+}
+
+.form__label {
+    display: block;
+    font-family: Montserrat;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 130%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #212121;
+    margin-bottom: 10px;
+}
+
+.form__label--green {
+    color: #428A60;
+}
+
+.form__name,
+.form__tel,
+.form__select-wrap {
+    margin-bottom: 20px;
+    padding: 0;
+    max-width: 320px;
+    width: 100%;
+    height: 50px;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 130%;
+    border: 1px solid #E4E4E4;
+    border-radius: 5px;
+    color: #212121;
+    background-color: #f8f8f8;
+}
+
+.form__tel {
+    display: inline-block;
+    max-width: 179px;
+    margin-right: 20px;
+    margin-bottom: 0;
+}
+
+.form__select-wrap {
+    display: inline-block;
+    max-width: 116px;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.form__select-wrap::before,
+.form__select-wrap::after {
+    position: absolute;
+    content: '';
+    background-image: url(../images/rus.png);
+    width: 26px;
+    height: 18px;
+    top: 14px;
+    left: 52px;
+}
+
+
+.form__select-wrap::after {
+    background-image: url(../images/arrow-down.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 15px;
+    left: 80px;
+}
+
+.form__select-wrap select {
+    max-width: 116px;
+    width: 100%;
+    height: 50px;
+    padding-left: 20px;
+    background: transparent;
+    border: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.form__name::placeholder,
+.form__tel::placeholder {
+    padding: 0 20px;
+    opacity: 0.2;
+}
+
+.form__btn {
+    padding-left: 110px;
+    margin-top: 38px;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 130%;
+    max-width: 320px;
+    width: 100%;
+    height: 42px;
+    border: none;
+    color: #ffffff;
+    background-color: #428A60;
+    border-radius: 5px;
+    text-align: left;
+    position: relative;
+    cursor: pointer;
+}
+
+.form__btn:hover {
+    background-color: #000000;
+}
+
+.form__btn::before {
+    position: absolute;
+    content: '';
+    background-image: url(../images/arrow-right.svg);
+    width: 17px;
+    height: 12px;
+    top: 15px;
+    right: 118px;   
+}
+
+@media (max-width: 720px) {
+    .card__inner {
+        flex-direction: column;
+    }
+
+    .card__image {
+        background: #ffffff;
+        margin: 0 auto;
+    }
+
+    .card__image-name,
+    .card__image-text {
+        color: #212121;
+    }
+
+    .card__image-name {
+        padding-left: 20px;
+    }
+
+    .card__image-text {
+        padding-top: 40px;
+        top: 0;
+        right: 0;
+        padding-right: 20px;
+    }
+
+    .card__image-prod {
+        position: relative;
+        top: 120px;
+        margin: 0 auto;
+    }
+    
+    .card__image::after {
+        height: 300px;
+        width: 300px;
+    }
+    
+    .card__image::before {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0;
+    }
+
+    .card__image {
+        height: 300px;
+    }
+
+    .card__image-prod {
+        margin: 0;
+        left: 59px;
+        width: 223px;
+        height: 122px;
+    }
+
+    .card__image::after {
+        left: 30px;
+        width: 202px;
+        height: 202px;
+    }
+
+    .form__tel {
+        margin-right: 5px;
+        max-width: 173px;
+    }
+
+    .form__btn {
+        padding-left: 94px;
+    }
+    
+    .form__btn::before {
+        right: 105px;
+    }
+
+    .form__select-wrap select {
+        padding-left: 5px;
+    }
+
+    .form__select-wrap::before {
+        left: 33px;
+    }
+
+    .form__select-wrap::after {
+        left: 59px;
+    }
+}
+
+@media (max-width: 420px) {
+    .form__secure {
+        padding-top: 39px;
+        text-align: center;
+    }
+
+    .form__secure-text--mright {
+        margin-right: 52px;
+        position: relative;
+    }
+
+    .form__secure-text--mright::before {
+        position: absolute;
+        content: '';
+        background-image: url(../images/lock.png);
+        width: 12px;
+        height: 15px;
+        left: 86px;
+        
+    }
+}
+
+@media (min-width: 420px) {
+    .form__secure {
+        display: none;
+    }
+
+
+}
